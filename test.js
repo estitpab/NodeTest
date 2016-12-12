@@ -1,1 +1,8 @@
-console.log('Bienvenue dans Node.js !');
+var EventEmitter =  require('events').EventEmitter;
+var jeu = new EventEmitter();
+
+jeu.on('gameover', function(message){
+	console.log(message);
+});
+
+jeu.emit('gameover','vous avez perdu')
