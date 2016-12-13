@@ -1,8 +1,3 @@
-var EventEmitter =  require('events').EventEmitter;
-var jeu = new EventEmitter();
+var markdown = require('markdown').markdown;
 
-jeu.on('gameover', function(message){
-	console.log(message);
-});
-
-jeu.emit('gameover','vous avez perdu')
+console.log(markdown.toHTML('Un paragraphe en **markdown** !'));
